@@ -1,0 +1,2619 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banking Services</title>
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="./responsive.css">
+    <link rel="stylesheet" href="./style.css">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <!-- ================= HEADER ================= -->
+    <header class="header">
+        <a href="index.html">   
+            <img src="./white.webp" alt="Stackly Logo" style="height: 60px; ">
+          </a> 
+        <!-- div class="logo">Tech<span>Solutions</span></div> -->
+
+        <!-- Navigation -->
+        <nav class="navbar">
+            <ul class="nav-links" >
+
+                <li class="dropdown">
+                    <a href="javascript:void(0)" class="dropdown-btn">Home <i class="fa-solid fa-caret-down"></i></a>
+                
+                    <ul class="dropdown-content">
+                        <li><a href="./index.html">Home 1</a></li>
+                        <li><a href="./home2.html">Home 2</a></li>
+                    </ul>
+                </li>
+                
+
+                
+                <li><a href="./aboutus.html">About-us</a></li>
+                <li><a href="./accounts.html">Accounts</a></li>
+                <li><a href="./loans.html">Loans</a></li>
+                
+                <li><a href="./contact.html">Contact</a></li>
+                <li><a href="./login.html">Login</a></li>
+
+            </ul>
+        </nav>
+
+        <!-- Toggle -->
+        <div class="menu-toggle" id="menu-toggle">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+
+    </header>
+
+<style>
+
+
+/* ================= GLOBAL ================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background: #f5f7fa;
+}
+
+a { text-decoration: none; }
+
+ul { list-style: none; }
+
+
+
+
+/* ================= HEADER ================= */
+
+
+.header {
+    width: 100%;
+    padding: 18px 40px;
+    background: rgb(73, 25, 25);
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.logo span {
+    color: #00d4ff;
+}
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+}
+
+/* Dropdown Wrapper */
+.dropdown {
+    position: relative;
+}
+
+/* Dropdown Button */
+.dropdown-btn {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+/* Desktop Hover */
+@media (min-width: 901px) {
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+}
+
+/* Dropdown Menu */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 38px;
+    left: 0;
+    background:rgb(73, 25, 25);
+    width: 160px;
+    border-radius: 8px;
+    padding: 10px 0;
+    z-index: 999;
+}
+
+.dropdown-content li a {
+    display: block;
+    padding: 10px 15px;
+    color: white;
+}
+
+.dropdown-content li a:hover {
+    background: rgb(73, 25, 25);
+}
+
+/* Toggle */
+.menu-toggle {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+li a{
+    color:white;
+}
+
+
+
+/* ================= FOOTER ================= */
+.footer {
+    background:rgb(73, 25, 25);
+    padding-top: 40px;
+    color: white;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+    flex-wrap: wrap;
+}
+
+/* Footer Boxes */
+.footer-box h3 {
+    margin-bottom: 15px;
+    font-size: 20px;
+    color:rgb(73, 25, 25);
+}
+
+.footer-box p, 
+.footer-box a {
+    color: #e0e0e0;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.footer-box ul {
+    list-style: none;
+}
+
+.footer-box ul li {
+    margin-bottom: 8px;
+}
+
+.footer-box ul li a {
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.footer-box ul li a:hover {
+    color: rgb(73, 25, 25);
+}
+
+
+.footer-bottom {
+    text-align: center;
+    background: rgb(73, 25, 25);
+    padding: 15px 0;
+}
+
+.footer-social a {
+    display: inline-block;
+    margin-right: 12px;
+    font-size: 18px;
+    width: 38px;
+    height: 38px;
+    text-align: center;
+    line-height: 38px;
+    border-radius: 50%;
+    background: #111;
+    color:rgb(73, 25, 25);
+    border: 1px solid rgb(73, 25, 25);
+    transition: 0.3s;
+}
+
+.footer-social a:hover {
+    background:rgb(73, 25, 25);
+    color: #000;
+    transform: translateY(-5px);
+}
+
+/* Map */
+.footer-box iframe {
+    width: 100%;
+    height: 180px;
+    border-radius: 10px;
+    border: none;
+}
+
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 900px) {
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background:rgb(73, 25, 25);
+        position: absolute;
+        top: 70px;
+        right: 20px;
+        width: 200px;
+        padding: 20px;
+        border-radius: 10px;
+        z-index: 1000;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .footer-box {
+        width: 45%;
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 500px) {
+    .footer-box {
+        width: 100%;
+    }
+}
+
+
+
+
+
+
+
+
+  
+
+.bank-hero {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* SLIDES */
+.slides {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 1.2s ease;
+}
+
+.slides.active {
+  opacity: 1;
+}
+
+/* CONTENT */
+.hero-content {
+  position: absolute;
+  top: 45%;
+  left: 8%;
+  transform: translateY(-60px);
+  color: black;
+  animation: dropDown 1.2s ease forwards;
+}
+
+@keyframes dropDown {
+  from { opacity: 0; transform: translateY(-80px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.hero-content h5 {
+  letter-spacing: 3px;
+  font-size: 18px;
+  margin-bottom: 12px;
+}
+
+.hero-content h1 {
+  font-size: 48px;
+  font-weight: 800;
+  margin-bottom: 14px;
+}
+
+.hero-content p {
+  max-width: 420px;
+  opacity: 0.9;
+}
+
+/* ACTION BOXES */
+.action-boxes {
+  position: absolute;
+  bottom: 60px;
+  left: 40px;
+  display: flex;
+  gap: 16px;
+  animation: slideLeft 1.2s ease forwards;
+}
+
+@keyframes slideLeft {
+  from { opacity: 0; transform: translateX(-120px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+.action-card {
+  background: rgba(255,255,255,0.95);
+  padding: 16px 22px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  color: #222;
+  font-weight: 600;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.25);
+  transition: transform 0.3s;
+}
+
+.action-card i {
+  color: #060607;
+  font-size: 20px;
+}
+
+.action-card:hover {
+  transform: translateY(-6px);
+}
+
+/* UPDATE BAR */
+.update-bar {
+  background: red;
+  color: #fff;
+  overflow: hidden;
+}
+
+.update-track {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  white-space: nowrap;
+  padding: 12px 0;
+  animation: scrollText 16s linear infinite;
+}
+
+.update-track span i {
+  color: black;
+}
+
+.update-track a {
+  color: black;
+  text-decoration: underline;
+}
+
+@keyframes scrollText {
+  from { transform: translateX(100%); }
+  to { transform: translateX(-100%); }
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 34px;
+  }
+
+  .action-boxes {
+    flex-direction: column;
+    left: 20px;
+  }
+}
+
+
+/* =========================
+   MOBILE VIEW (max-width: 575px)
+========================= */
+@media (max-width: 575px) {
+  .hero-content {
+    top: 50%;
+    left: 16px;
+    right: 16px;
+    transform: translateY(-50%);
+    text-align: center;
+  }
+
+  .hero-content h5 {
+    font-size: 12px;
+    letter-spacing: 2px;
+  }
+
+  .hero-content h1 {
+    font-size: 26px;
+    line-height: 1.3;
+  }
+
+  .hero-content p {
+    max-width: 100%;
+    font-size: 14px;
+  }
+
+  .action-boxes {
+    position: static;
+    margin-top: 24px;
+    padding: 0 16px;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .action-card {
+    width: 100%;
+    justify-content: center;
+    font-size: 14px;
+    padding: 14px 18px;
+  }
+}
+
+/* =========================
+   TABLET VIEW (576px – 767px)
+========================= */
+@media (min-width: 576px) and (max-width: 767px) {
+  .hero-content {
+    top: 50%;
+    left: 6%;
+    transform: translateY(-50%);
+  }
+
+  .hero-content h1 {
+    font-size: 32px;
+  }
+
+  .hero-content p {
+    font-size: 15px;
+  }
+
+  .action-boxes {
+    bottom: 30px;
+    left: 24px;
+    flex-direction: row;
+  }
+
+  .action-card {
+    font-size: 14px;
+    padding: 14px 20px;
+  }
+}
+
+/* =========================
+   LAPTOP VIEW (768px – 1023px)
+========================= */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .hero-content {
+    top: 45%;
+    left: 7%;
+  }
+
+  .hero-content h1 {
+    font-size: 40px;
+  }
+
+  .hero-content p {
+    font-size: 16px;
+  }
+
+  .action-boxes {
+    bottom: 40px;
+    left: 30px;
+    gap: 18px;
+  }
+
+  .action-card {
+    font-size: 15px;
+    padding: 16px 22px;
+  }
+}
+
+/* =========================
+   DESKTOP VIEW (1024px and up)
+========================= */
+@media (min-width: 1024px) {
+  .hero-content {
+    top: 45%;
+    left: 8%;
+  }
+
+  .hero-content h1 {
+    font-size: 48px;
+  }
+
+  .hero-content p {
+    font-size: 18px;
+  }
+
+  .action-boxes {
+    bottom: 60px;
+    left: 40px;
+    gap: 20px;
+  }
+
+  .action-card {
+    font-size: 16px;
+    padding: 16px 24px;
+  }
+}
+
+/* ----- */
+
+.bank-category-section {
+  padding: 100px 8%;
+  background: #faf6f1;
+  text-align: center;
+}
+
+.bank-category-section h2 {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+.sub-text {
+  color: #666;
+  margin-bottom: 60px;
+}
+
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+}
+
+/* CARD */
+.category-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 16px;
+  height: 340px;
+  opacity: 0;
+  transition: all 0.9s ease;
+}
+
+.category-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* HOVER OVERLAY */
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(231, 116, 126, 0.93);
+  color: #fff;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: 0.4s ease;
+}
+
+.category-card:hover .overlay {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.overlay h4 {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.overlay p {
+  font-size: 15px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+/* READ MORE BUTTON */
+.read-more {
+  padding: 10px 22px;
+  border-radius: 30px;
+  background: #fff;
+  color: #b41423;
+  font-weight: 600;
+  font-size: 14px;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.read-more:hover {
+  background: #000;
+  color: #fff;
+}
+
+/* SCROLL DIRECTIONS */
+.reveal-left { transform: translateX(-80px); }
+.reveal-right { transform: translateX(80px); }
+.reveal-bottom { transform: translateY(80px); }
+.reveal-top { transform: translateY(-80px); }
+
+.category-card.show {
+  opacity: 1;
+  transform: translate(0,0);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .bank-category-section h2 {
+    font-size: 30px;
+  }
+
+  .category-card {
+    height: 280px;
+  }
+
+  .overlay p {
+    font-size: 14px;
+  }
+}
+
+
+
+
+/* BASE */
+.banking-merged-section {
+  background: #0b0b0b;
+  padding: 80px 20px;
+  color: #fff;
+}
+
+/* ==========================
+   SHOWCASE SECTION
+========================== */
+
+.banking-showcase-section {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  max-width: 1200px;
+  margin: auto;
+  margin-bottom: 80px;
+}
+
+.banking-showcase-card {
+  position: relative;
+  height: 320px;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,0.15);
+  cursor: pointer;
+}
+
+.banking-showcase-bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.6s ease;
+}
+
+.banking-showcase-card:hover .banking-showcase-bg {
+  transform: scale(1.15);
+}
+
+.banking-showcase-content {
+  position: absolute;
+  inset: 0;
+  padding: 30px;
+  background: linear-gradient(to top, rgba(0,0,0,0.85), transparent);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.banking-showcase-icon {
+  font-size: 36px;
+  margin-bottom: 12px;
+}
+
+.banking-showcase-arrow {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  border: 1px solid #fff;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.banking-showcase-card:hover .banking-showcase-arrow {
+  background: #e63946;
+  border-color: #e63946;
+}
+
+/* ==========================
+   SERVICES SECTION
+========================== */
+
+.bank-services-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.bank-service-card {
+  position: relative;
+  height: 340px;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,0.15);
+}
+
+.bank-card-bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.6s ease;
+}
+
+.bank-service-card:hover .bank-card-bg {
+  transform: scale(1.15);
+}
+
+.bank-card-content {
+  position: absolute;
+  inset: 0;
+  padding: 28px;
+  background: linear-gradient(to top, rgba(0,0,0,0.85), transparent);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.bank-icon {
+  font-size: 34px;
+  margin-bottom: 10px;
+}
+
+.bank-arrow {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  border: 1px solid #fff;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bank-service-card:hover .bank-arrow {
+  background: #e63946;
+  border-color: #e63946;
+}
+
+/* BUTTON */
+.bank-services-btn {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.bank-services-btn a {
+  padding: 14px 40px;
+  background: #e63946;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+@media (max-width: 992px) {
+  .banking-showcase-section,
+  .bank-services-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .banking-showcase-section,
+  .bank-services-container {
+    grid-template-columns: 1fr;
+  }
+
+  .banking-showcase-card,
+  .bank-service-card {
+    height: 280px;
+  }
+}
+/* ------ */
+
+/* SECTION */
+.mf-slider-section {
+  padding: 80px 20px;
+  background: #fff;
+  overflow: hidden;
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* HEADING */
+.mf-slider-heading {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.mf-slider-heading h2 {
+  font-size: 42px;
+  font-weight: 700;
+}
+
+.mf-slider-heading p {
+  color: #666;
+  margin-top: 10px;
+}
+
+/* SLIDER */
+.mf-slider-wrapper {
+  overflow: hidden;
+  width: 100%;
+}
+
+.mf-slider-track {
+  display: flex;
+  gap: 25px;
+  animation: mfAutoSlide 18s linear infinite;
+}
+
+@keyframes mfAutoSlide {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+/* CARD */
+.mf-slide-card {
+  position: relative;
+  min-width: 340px;
+  height: 420px;
+  overflow: hidden;
+  text-decoration: none;
+}
+
+.mf-slide-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(100%);
+  transition: all 0.5s ease;
+}
+
+/* HOVER COLOR */
+.mf-slide-card:hover img {
+  filter: grayscale(0%);
+  transform: scale(1.08);
+}
+
+/* OVERLAY */
+.mf-slide-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding: 25px;
+  color: #fff;
+}
+
+.mf-slide-overlay span {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.mf-slide-overlay i {
+  font-size: 26px;
+}
+
+/* PAUSE ON HOVER */
+.mf-slider-wrapper:hover .mf-slider-track {
+  animation-play-state: paused;
+}
+
+/* RESPONSIVE */
+@media (max-width: 992px) {
+  .mf-slide-card {
+    min-width: 280px;
+    height: 360px;
+  }
+
+  .mf-slider-heading h2 {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 576px) {
+  .mf-slide-card {
+    min-width: 240px;
+    height: 300px;
+  }
+
+  .mf-slide-overlay span {
+    font-size: 18px;
+  }
+}
+
+
+
+/* ===== EMERGENCY SERVICE REQUEST SECTION ===== */
+.esr-wrap {
+  background: #f9f2ea;
+  padding: 90px 20px;
+  font-family: Arial, sans-serif;
+}
+
+/* HEADING */
+.esr-head {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.esr-head h2 {
+  font-size: 42px;
+  font-weight: 700;
+}
+
+.esr-head p {
+  margin-top: 8px;
+  color: #666;
+}
+
+/* ICONS */
+.esr-icons {
+  max-width: 1200px;
+  margin: 0 auto 60px;
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 20px;
+  text-align: center;
+}
+
+.esr-icon-box span {
+  width: 80px;
+  height: 80px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: 1px solid #ddd;
+  font-size: 36px;
+  margin-bottom: 12px;
+}
+
+.esr-icon-box p {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.esr-icon-box.active span {
+  background: #fff;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+}
+
+/* GRID */
+.esr-grid {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 30px;
+}
+
+/* LIST */
+.esr-list {
+  background: #fff;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.esr-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 25px;
+  text-decoration: none;
+  color: #000;
+  border-bottom: 1px solid #eee;
+  transition: background .3s;
+}
+
+.esr-item:hover {
+  background: #f6f6f6;
+}
+
+.esr-item span {
+  color: #999;
+}
+
+/* BANNER */
+.esr-banner {
+  background: #111;
+  border-radius: 6px;
+  display: flex;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(80px);
+  transition: all .9s ease;
+}
+
+.esr-banner.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.esr-banner img {
+  width: 50%;
+  object-fit: cover;
+  filter: grayscale(100%);
+}
+
+.esr-banner-text {
+  width: 50%;
+  padding: 35px;
+  color: #fff;
+}
+
+.esr-headset {
+  font-size: 30px;
+}
+
+.esr-banner-text h3 {
+  font-size: 28px;
+  margin: 15px 0;
+}
+
+.esr-phone {
+  color: #e63946;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 992px) {
+  .esr-icons {
+    grid-template-columns: repeat(2,1fr);
+  }
+
+  .esr-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .esr-banner {
+    flex-direction: column;
+  }
+
+  .esr-banner img,
+  .esr-banner-text {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .esr-head h2 {
+    font-size: 30px;
+  }
+
+  .esr-icon-box span {
+    width: 60px;
+    height: 60px;
+    font-size: 28px;
+  }
+
+  .esr-item {
+    font-size: 14px;
+  }
+}
+
+
+
+
+
+/* ===== CREDIT CARD SECTION ===== */
+.cc-apply-section {
+  padding: 90px 20px;
+  background: #fff7f2;
+  overflow: hidden;
+}
+
+.cc-apply-container {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  gap: 60px;
+  align-items: center;
+}
+
+/* LEFT IMAGE */
+.cc-image-wrap {
+  position: relative;
+  flex: 1;
+  animation: ccFloat 4s ease-in-out infinite;
+}
+
+.cc-image-wrap img {
+  width: 100%;
+  max-width: 420px;
+  animation: ccZoom 6s ease-in-out infinite;
+}
+
+/* FLOATING ICONS */
+.cc-floating-icon {
+  position: absolute;
+  background: #fff;
+  border-radius: 50%;
+  padding: 14px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  animation: ccFloat 3s infinite;
+}
+
+.cc-icon-1 { top: 10%; left: -10px; }
+.cc-icon-2 { bottom: 20%; right: 10px; }
+.cc-icon-3 { top: 50%; right: -15px; }
+
+/* RIGHT CONTENT */
+.cc-content {
+  flex: 1;
+}
+
+.cc-typing-text {
+  font-size: 42px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.cc-desc {
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.cc-feature-list {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 25px;
+}
+
+.cc-feature-list li {
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.cc-feature-list i {
+  color: #e63946;
+  margin-right: 8px;
+}
+
+/* FORM */
+.cc-form-title {
+  margin-bottom: 15px;
+}
+
+.cc-form input {
+  width: 100%;
+  padding: 14px;
+  border: 1px solid #ddd;
+  margin-bottom: 10px;
+}
+
+.cc-form button {
+  width: 100%;
+  padding: 14px;
+  background: #e63946;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.cc-error {
+  color: red;
+  display: none;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+/* SCROLL ANIMATION */
+.cc-hidden {
+  opacity: 0;
+  transform: translateY(80px);
+  transition: all 1s ease;
+}
+
+.cc-show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* FLOAT & ZOOM */
+@keyframes ccFloat {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+}
+
+@keyframes ccZoom {
+  0%,100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+
+/* RESPONSIVE */
+@media(max-width: 900px) {
+  .cc-apply-container {
+    flex-direction: column;
+    text-align: center;
+  }
+  .cc-typing-text {
+    font-size: 32px;
+  }
+}
+
+/* ===== FOREX SECTION ===== */
+.fxr-section {
+  position: relative;
+  padding: 90px 20px;
+  color: #fff;
+  overflow: hidden;
+}
+
+/* BACKGROUND ZOOM + BLUR */
+.fxr-bg {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)),
+    url("forex-bg.jpg") center/cover no-repeat;
+  animation: fxrZoom 12s ease-in-out infinite;
+  filter: blur(2px);
+  z-index: -1;
+}
+
+@keyframes fxrZoom {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.08); }
+  100% { transform: scale(1); }
+}
+
+.fxr-container {
+  max-width: 1200px;
+  margin: auto;
+  text-align: center;
+}
+
+/* TITLES */
+.fxr-title {
+  font-size: 44px;
+  font-weight: 700;
+}
+
+.fxr-subtitle {
+  margin-bottom: 40px;
+  color: #ccc;
+}
+
+/* TABS */
+.fxr-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  margin-bottom: 40px;
+}
+
+.fxr-tab {
+  padding: 14px 26px;
+  background: transparent;
+  border: 1px solid #555;
+  color: #fff;
+  cursor: pointer;
+}
+
+.fxr-active {
+  border-color: #e63946;
+  color: #e63946;
+}
+
+.fxr-assist {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #fff;
+  text-decoration: none;
+}
+
+/* GRID */
+.fxr-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 25px;
+}
+
+/* CARD */
+.fxr-card {
+  border: 1px solid rgba(255,255,255,0.2);
+  padding: 25px;
+  backdrop-filter: blur(6px);
+  transition: transform 0.4s;
+}
+
+.fxr-card:hover {
+  transform: translateY(-8px);
+}
+
+.fxr-card h4 {
+  margin: 12px 0;
+}
+
+/* FLAG IMAGE */
+.fxr-flag {
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: auto;
+  border: 2px solid rgba(255,255,255,0.4);
+}
+
+.fxr-flag img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* SCROLL ANIMATIONS */
+.fxr-left, .fxr-right, .fxr-up, .fxr-down {
+  opacity: 0;
+  transition: all 0.9s ease;
+}
+
+.fxr-left { transform: translateX(-80px); }
+.fxr-right { transform: translateX(80px); }
+.fxr-up { transform: translateY(-80px); }
+.fxr-down { transform: translateY(80px); }
+
+.fxr-show {
+  opacity: 1;
+  transform: translate(0,0);
+}
+
+/* RESPONSIVE */
+@media(max-width: 768px) {
+  .fxr-title { font-size: 32px; }
+  .fxr-assist {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* ===== SAFE CASHBACK SECTION ===== */
+.x10cb-section {
+  padding: 90px 6%;
+  background: #f9f6f2;
+  overflow: hidden;
+}
+
+.x10cb-slider {
+  position: relative;
+}
+
+/* SLIDE */
+.x10cb-slide {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+  opacity: 0;
+  transform: translateY(80px);
+  transition: 1s ease;
+  position: absolute;
+  width: 100%;
+}
+
+.x10cb-slide.x10cb-active {
+  opacity: 1;
+  transform: translateY(0);
+  position: relative;
+}
+
+/* TEXT */
+.x10cb-text {
+  max-width: 520px;
+}
+
+.x10cb-label {
+  color: #c9182b;
+  font-weight: 600;
+}
+
+.x10cb-text h2 {
+  font-size: 42px;
+  margin: 10px 0;
+}
+
+.x10cb-text p {
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.x10cb-point {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 25px;
+}
+
+.x10cb-point span {
+  background: #c9182b;
+  color: #fff;
+  border-radius: 50%;
+  font-size: 12px;
+  padding: 6px 9px;
+}
+
+.x10cb-btn {
+  display: inline-block;
+  background: #000;
+  color: #fff;
+  padding: 14px 28px;
+  text-decoration: none;
+  border-radius: 6px;
+}
+
+/* IMAGE */
+.x10cb-media {
+  transform: translateX(140px);
+  opacity: 0;
+  transition: 1s ease;
+}
+
+.x10cb-slide.x10cb-active .x10cb-media {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+/* HORIZONTAL SEMI CIRCLE */
+.x10cb-semicircle {
+  position: relative;
+  width: 360px;
+  height: 240px;
+  border-radius: 240px 0 0 240px;
+  overflow: hidden;
+  background: #fff;
+  animation: x10cb-shadow 2.8s infinite;
+}
+
+.x10cb-semicircle img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* SHADOW PULSE */
+@keyframes x10cb-shadow {
+  0% { box-shadow: 0 15px 35px rgba(0,0,0,.25); }
+  50% { box-shadow: 0 30px 70px rgba(0,0,0,.35); }
+  100% { box-shadow: 0 15px 35px rgba(0,0,0,.25); }
+}
+
+/* CORNERS */
+.x10cb-corner {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border: 2px solid #c9182b;
+  animation: x10cb-blink 2s infinite;
+}
+
+.x10cb-corner.tl { top: 10px; left: 10px; }
+.x10cb-corner.tr { top: 10px; right: 10px; }
+.x10cb-corner.bl { bottom: 10px; left: 10px; }
+.x10cb-corner.br { bottom: 10px; right: 10px; }
+
+@keyframes x10cb-blink {
+  0%,100% { opacity: .2; }
+  50% { opacity: 1; }
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .x10cb-slide {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .x10cb-media {
+    transform: translateY(60px);
+  }
+
+  .x10cb-semicircle {
+    width: 280px;
+    height: 180px;
+    border-radius: 180px 0 0 180px;
+  }
+}
+
+
+
+/* ===== BANK RELATIONSHIP SECTION ===== */
+.bnkrel-section {
+  padding: 90px 6%;
+  background: #f5f7fb;
+  opacity: 0;
+  transform: translateY(80px);
+  transition: 1s ease;
+}
+
+.bnkrel-section.bnkrel-show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* HEADER */
+.bnkrel-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.bnkrel-header h2 {
+  font-size: 42px;
+}
+
+.bnkrel-header p {
+  color: #666;
+  margin-top: 10px;
+}
+
+/* COLUMNS */
+.bnkrel-columns {
+  display: flex;
+  gap: 40px;
+}
+
+.bnkrel-box {
+  flex: 1;
+  background: #fff;
+  padding: 35px;
+  border-radius: 14px;
+  box-shadow: 0 25px 60px rgba(0,0,0,0.08);
+}
+
+.bnkrel-box h3 {
+  margin-bottom: 25px;
+}
+
+/* ITEMS */
+.bnkrel-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 18px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: .4s ease;
+}
+
+.bnkrel-item:not(:hover) {
+  filter: blur(0);
+}
+
+.bnkrel-box:hover .bnkrel-item:not(:hover) {
+  filter: blur(3px);
+  opacity: .5;
+}
+
+.bnkrel-item:hover {
+  background: #111;
+  color: #fff;
+  transform: translateX(8px);
+}
+
+.bnkrel-icon {
+  font-size: 20px;
+}
+
+.bnkrel-arrow {
+  margin-left: auto;
+  transition: .4s;
+}
+
+.bnkrel-item:hover .bnkrel-arrow {
+  transform: translateX(10px);
+}
+
+/* FOOTER */
+.bnkrel-footer {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.bnkrel-footer a {
+  text-decoration: none;
+  font-weight: 600;
+  color: #000;
+  border-bottom: 2px solid #000;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .bnkrel-columns {
+    flex-direction: column;
+  }
+
+  .bnkrel-header h2 {
+    font-size: 32px;
+  }
+}
+
+
+/* ===== FOREX VIDEO BACKGROUND ===== */
+.fxr-section {
+  position: relative;
+  overflow: hidden;
+}
+
+/* VIDEO */
+.fxr-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+/* OVERLAY */
+.fxr-video-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  z-index: 1;
+}
+
+/* CONTENT ABOVE VIDEO */
+.fxr-container {
+  position: relative;
+  z-index: 2;
+}
+
+
+
+/* ===== BANKING RELATIONSHIP VIDEO BACKGROUND ===== */
+.bnkrel-section {
+  position: relative;
+  overflow: hidden;
+  padding: 90px 6%;
+}
+
+/* VIDEO */
+.bnkrel-bg-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+/* DARK OVERLAY */
+.bnkrel-bg-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  z-index: 1;
+}
+
+/* CONTENT ABOVE VIDEO */
+.bnkrel-content {
+  position: relative;
+  z-index: 2;
+}
+
+/* TEXT COLOR FIX */
+.bnkrel-header h2,
+.bnkrel-header p,
+.bnkrel-box h3,
+.bnkrel-item span,
+.bnkrel-footer a {
+  color: #fff;
+}
+
+/* CARD BACKGROUND */
+.bnkrel-box {
+  background: rgba(255,255,255,0.12);
+  backdrop-filter: blur(8px);
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .bnkrel-section {
+    padding: 70px 5%;
+  }
+}
+
+
+
+
+/* ===== BANK LOGO LOADER ===== */
+.pgload-wrapper {
+  position: fixed;
+  inset: 0;
+  background: radial-gradient(circle at top, #2b0d0d, #0b0b0b);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 99999;
+  transition: opacity .3s ease, visibility .3s ease;
+}
+
+.pgload-wrapper.pgload-hide {
+  opacity: 0;
+  visibility: hidden;
+}
+
+/* LOGO BOX */
+.pgload-logo-box {
+  position: relative;
+  text-align: center;
+}
+
+/* RING ANIMATION */
+.pgload-ring {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  border: 3px solid rgba(255,80,80,.2);
+  border-top: 3px solid #ff4d4d;
+  animation: pgload-rotate 1.4s linear infinite;
+}
+
+/* BANK LOGO */
+.pgload-logo {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 42px;
+  color: #ff6b6b;
+  animation: pgload-pulse 1.8s ease-in-out infinite;
+}
+
+/* TEXT */
+.pgload-text {
+  margin-top: 25px;
+  font-size: 15px;
+  letter-spacing: 1px;
+  color: #ffd6d6;
+}
+
+/* ANIMATIONS */
+@keyframes pgload-rotate {
+  to { transform: rotate(360deg); }
+}
+
+@keyframes pgload-pulse {
+  0%,100% {
+    transform: scale(1);
+    opacity: .7;
+  }
+  50% {
+    transform: scale(1.15);
+    opacity: 1;
+  }
+}
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+  .pgload-ring {
+    width: 90px;
+    height: 90px;
+  }
+
+  .pgload-logo {
+    font-size: 34px;
+  }
+
+  .pgload-text {
+    font-size: 13px;
+  }
+}
+
+
+
+
+
+
+</style>
+
+<!-- PAGE LOADER WITH BANK LOGO -->
+<div class="pgload-wrapper" id="pgload">
+    <div class="pgload-logo-box">
+  
+      <div class="pgload-ring"></div>
+  
+      <div class="pgload-logo">
+        🏦
+      </div>
+  
+      <p class="pgload-text">Securing your banking experience</p>
+  
+    </div>
+  </div>
+  
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<section class="bank-hero">
+
+  <!-- SLIDES -->
+  <div class="slides active" style="background-image:url('./multi11.webp');">
+    <div class="hero-content">
+      <h5>STACKLY BANK</h5>
+      <h1 class="type-text"></h1>
+      <p>Secure, fast and smart banking for your future.</p>
+    </div>
+  </div>
+
+  <div class="slides" style="background-image:url('./ba.webp');">
+    <div class="hero-content">
+      <h5>DIGITAL BANKING</h5>
+      <h1 class="type-text"></h1>
+      <p>Manage your finances anytime, anywhere.</p>
+    </div>
+  </div>
+
+  <div class="slides" style="background-image:url('./multi11.webp');">
+    <div class="hero-content">
+      <h5>SMART SAVINGS</h5>
+      <h1 class="type-text"></h1>
+      <p>Grow your savings with better interest rates.</p>
+    </div>
+  </div>
+
+  <!-- ACTION BOXES -->
+  <div class="action-boxes">
+    <a href="404.html" class="action-card">
+      <i class="fa-solid fa-credit-card"></i>
+      <span>Make a Payment</span>
+    </a>
+
+    <a href="404.html" class="action-card">
+      <i class="fa-solid fa-calendar-check"></i>
+      <span>Make an Appointment</span>
+    </a>
+  </div>
+
+</section>
+
+<!-- UPDATE BAR -->
+<div class="update-bar">
+  <div class="update-track">
+    <span><i class="fa-solid fa-arrow-trend-up"></i> Get upto <b>4%</b> on our savings account balance with StacklyBank</span>
+    <!-- <a href="404.html">More Details</a> -->
+  </div>
+</div>
+
+
+<section class="bank-category-section">
+    <h2>Bank For A Better Tomorrow</h2>
+    <p class="sub-text">Committed to helping our customers succeed.</p>
+  
+    <div class="category-grid">
+  
+      <div class="category-card reveal-left">
+        <img src="./fixed.webp" alt="">
+        <div class="overlay">
+          <h4>Fixed Deposit</h4>
+          <p>Fixed returns with peace of mind and long-term security.</p>
+          <a href="404.html" class="read-more">Read More →</a>
+        </div>
+      </div>
+  
+      <div class="category-card reveal-bottom">
+        <img src="./bank1.webp" alt="">
+        <div class="overlay">
+          <h4>Current Account</h4>
+          <p>Smart banking solutions designed for growing businesses.</p>
+          <a href="404.html" class="read-more">Read More →</a>
+        </div>
+      </div>
+  
+      <div class="category-card reveal-right">
+        <img src="./mutual.webp" alt="">
+        <div class="overlay">
+          <h4>Mutual Funds</h4>
+          <p>Strategic investments for better future returns.</p>
+          <a href="404.html" class="read-more">Read More →</a>
+        </div>
+      </div>
+  
+      <div class="category-card reveal-top">
+        <img src="./loan.webp" alt="">
+        <div class="overlay">
+          <h4>Loans</h4>
+          <p>Flexible loan options tailored to your needs.</p>
+          <a href="404.html" class="read-more">Read More →</a>
+        </div>
+      </div>
+  
+    </div>
+  </section>
+
+
+ 
+  <section class="mf-slider-section">
+
+    <div class="mf-slider-heading">
+      <h2>Grow Your Wealth Secure</h2>
+      <p>Don’t just make a deposit, make an investment today.</p>
+    </div>
+  
+    <div class="mf-slider-wrapper">
+      <div class="mf-slider-track">
+  
+        <!-- CARD 1 -->
+        <a href="./404.html" class="mf-slide-card">
+          <img src="./ba.webp" alt="Multi Currency Account">
+          <div class="mf-slide-overlay">
+            <span>Multi Currency A/C</span>
+            <i>→</i>
+          </div>
+        </a>
+  
+        <!-- CARD 2 -->
+        <a href="./404.html" class="mf-slide-card">
+          <img src="./mu.webp" alt="Mutual Fund">
+          <div class="mf-slide-overlay">
+            <span>Mutual Funds</span>
+            <i>→</i>
+          </div>
+        </a>
+  
+        <!-- CARD 3 -->
+        <a href="./404.html" class="mf-slide-card">
+          <img src="./pension.webp" alt="Pension Scheme">
+          <div class="mf-slide-overlay">
+            <span>Pension Scheme</span>
+            <i>→</i>
+          </div>
+        </a>
+  
+        <!-- DUPLICATE FOR SMOOTH LOOP -->
+        <a href="./404.html" class="mf-slide-card">
+          <img src="./multi11.webp">
+          <div class="mf-slide-overlay">
+            <span>Multi Currency A/C</span>
+            <i>→</i>
+          </div>
+        </a>
+  
+      </div>
+    </div>
+  
+  </section>
+
+
+
+  <section class="esr-wrap">
+
+    <!-- HEADING -->
+    <div class="esr-head">
+      <h2>Emergency Service Request</h2>
+      <p>List of banking service requests — all in one place</p>
+    </div>
+  
+    <!-- ICON CATEGORIES -->
+    <div class="esr-icons">
+  
+      <div class="esr-icon-box active">
+        <span>💳</span>
+        <p>Credit / Debit Card<br>Related</p>
+      </div>
+  
+      <div class="esr-icon-box">
+        <span>📱</span>
+        <p>Mobile / Internet<br>Banking</p>
+      </div>
+  
+      <div class="esr-icon-box">
+        <span>🏦</span>
+        <p>Account Details<br>Changing</p>
+      </div>
+  
+      <div class="esr-icon-box">
+        <span>📄</span>
+        <p>Cheque Book / DD<br>Related</p>
+      </div>
+  
+    </div>
+  
+    <!-- CONTENT GRID -->
+    <div class="esr-grid">
+  
+      <!-- LEFT LIST -->
+      <div class="esr-list">
+        <a href="./404.html" class="esr-item">Block Debit / ATM Card <span>→</span></a>
+        <a href="./404.html" class="esr-item">Generate Debit Card PIN Number <span>→</span></a>
+        <a href="./404.html" class="esr-item">Unlock Debit / ATM Card <span>→</span></a>
+        <a href="./404.html" class="esr-item">Reissue Lost Debit / ATM Card <span>→</span></a>
+      </div>
+  
+      <!-- RIGHT IMAGE -->
+      <div class="esr-banner esr-animate">
+        <div class="esr-banner-text">
+          <span class="esr-headset">🎧</span>
+          <h3>Call for<br>Private Banking</h3>
+          <p class="esr-phone">+8 (222) 123 456 78</p>
+        </div>
+        <img src="./ab1.webp" alt="Private Banking">
+      </div>
+  
+    </div>
+  
+  </section>
+
+
+
+
+
+
+  <section class="bnkrel-section">
+
+    <!-- BACKGROUND VIDEO -->
+    <video class="bnkrel-bg-video" autoplay muted loop playsinline>
+      <source src="./cre2.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  
+    <!-- OVERLAY -->
+    <div class="bnkrel-bg-overlay"></div>
+  
+    <!-- CONTENT -->
+    <div class="bnkrel-content">
+  
+      <div class="bnkrel-header">
+        <h2>Banking for your needs</h2>
+        <p>The bank that builds better relationships</p>
+      </div>
+  
+      <div class="bnkrel-columns">
+  
+        <!-- INDIVIDUAL -->
+        <div class="bnkrel-box">
+          <h3>Banking for Individuals</h3>
+  
+          <div class="bnkrel-item">
+            <span class="bnkrel-icon">💰</span>
+            <span>Savings & CDs</span>
+            <span class="bnkrel-arrow">➜</span>
+          </div>
+  
+          <div class="bnkrel-item">
+            <span class="bnkrel-icon">📱</span>
+            <span>Online & Mobile</span>
+            <span class="bnkrel-arrow">➜</span>
+          </div>
+  
+          <div class="bnkrel-item">
+            <span class="bnkrel-icon">🏦</span>
+            <span>Consumer Loans</span>
+            <span class="bnkrel-arrow">➜</span>
+          </div>
+        </div>
+  
+        <!-- BUSINESS -->
+        <div class="bnkrel-box">
+          <h3>Banking for Business</h3>
+  
+          <div class="bnkrel-item">
+            <span class="bnkrel-icon">📊</span>
+            <span>Business Accounts</span>
+            <span class="bnkrel-arrow">➜</span>
+          </div>
+  
+          <div class="bnkrel-item">
+            <span class="bnkrel-icon">💳</span>
+            <span>Merchant Services</span>
+            <span class="bnkrel-arrow">➜</span>
+          </div>
+  
+          <div class="bnkrel-item">
+            <span class="bnkrel-icon">📈</span>
+            <span>Commercial Loans</span>
+            <span class="bnkrel-arrow">➜</span>
+          </div>
+        </div>
+  
+      </div>
+  
+      <div class="bnkrel-footer">
+        <a href="404.html">View Other Services</a>
+      </div>
+  
+    </div>
+  </section>
+  
+  
+  
+
+
+  <!-- CREDIT CARD APPLY SECTION -->
+<section class="cc-apply-section">
+
+    <div class="cc-apply-container cc-hidden">
+  
+      <!-- LEFT IMAGE -->
+      <div class="cc-image-wrap">
+        <img src="./cre.webp" alt="Credit Card" />
+        <div class="cc-floating-icon cc-icon-1"><i class="fa-solid fa-credit-card"></i></div>
+        <div class="cc-floating-icon cc-icon-2"><i class="fa-solid fa-lock"></i></div>
+        <div class="cc-floating-icon cc-icon-3"><i class="fa-solid fa-mobile-screen"></i></div>
+      </div>
+  
+      <!-- RIGHT CONTENT -->
+      <div class="cc-content">
+  
+        <h2 class="cc-typing-text">
+          Personalize Your Card And Stand Out From Crowd
+        </h2>
+  
+        <p class="cc-desc">
+          Desire that they cannot foresee the pain & trouble that are bound
+          to ensue equal blame belongs through shrinking.
+        </p>
+  
+        <ul class="cc-feature-list">
+          <li><i class="fa-solid fa-check"></i> Great explorer of the master-builder</li>
+          <li><i class="fa-solid fa-check"></i> Great explorer of the master-builder</li>
+        </ul>
+  
+        <h4 class="cc-form-title">Apply for Credit Card</h4>
+  
+        <form class="cc-form" onsubmit="return ccValidateForm()">
+          <input type="text" id="ccName" placeholder="Name" />
+          <p class="cc-error" id="ccError">Please fill details</p>
+  
+          <button type="submit">Apply Now</button>
+        </form>
+  
+      </div>
+    </div>
+  </section>
+  
+  <!-- FONT AWESOME -->
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+
+    <section class="fxr-section">
+
+        <!-- BACKGROUND VIDEO -->
+        <video class="fxr-video" autoplay muted loop playsinline>
+          <source src="./bank.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      
+        <!-- DARK OVERLAY -->
+        <div class="fxr-video-overlay"></div>
+      
+        <!-- EXISTING CONTENT -->
+        <div class="fxr-container">
+      
+          <h2 class="fxr-title">Foreign Exchange Rates</h2>
+          <p class="fxr-subtitle">Denouncing pleasure & praising pain was born.</p>
+      
+          <div class="fxr-tabs">
+            <button class="fxr-tab fxr-active">Money Send & Receive</button>
+      
+            <a href="./404.html" class="fxr-assist">
+              <i class="fa-solid fa-bars"></i> Click to Get Assistant
+            </a>
+          </div>
+      
+          <div class="fxr-grid">
+      
+            <!-- <div class="fxr-card fxr-left">
+              <div class="fxr-flag">
+                <img src="./" alt="USD">
+              </div>
+              <h4>USD</h4>
+              <p>Send : <span>79.89</span></p>
+              <p>Receive : <span>76.54</span></p>
+            </div> -->
+      
+            <div class="fxr-card fxr-up">
+              <div class="fxr-flag">
+                <img src="./sek.webp" alt="SEK">
+              </div>
+              <h4>SEK</h4>
+              <p>Send : <span>8.20</span></p>
+              <p>Receive : <span>7.25</span></p>
+            </div>
+      
+            <div class="fxr-card fxr-right">
+              <div class="fxr-flag">
+                <img src="./gbp.webp" alt="GBP">
+              </div>
+              <h4>GBP</h4>
+              <p>Send : <span>101.88</span></p>
+              <p>Receive : <span>96.55</span></p>
+            </div>
+      
+            <div class="fxr-card fxr-down">
+              <div class="fxr-flag">
+                <img src="./jpy.webp" alt="JPY">
+              </div>
+              <h4>JPY</h4>
+              <p>Send : <span>62.82</span></p>
+              <p>Receive : <span>58.46</span></p>
+            </div>
+      
+            <div class="fxr-card fxr-left">
+              <div class="fxr-flag">
+                <img src="./aud.webp" alt="AUD">
+              </div>
+              <h4>AUD</h4>
+              <p>Send : <span>57.52</span></p>
+              <p>Receive : <span>54.21</span></p>
+            </div>
+      
+            <!-- <div class="fxr-card fxr-right">
+              <div class="fxr-flag">
+                <img src="flags/ca.png" alt="CAD">
+              </div>
+              <h4>CAD</h4>
+              <p>Send : <span>63.41</span></p>
+              <p>Receive : <span>59.75</span></p>
+            </div> -->
+      
+          </div>
+        </div>
+      </section>
+      
+      <link rel="stylesheet"
+       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+      
+  
+       <section class="x10cb-section">
+
+        <div class="x10cb-slider">
+      
+          <!-- SLIDE 1 -->
+          <div class="x10cb-slide x10cb-active">
+            <div class="x10cb-text">
+              <span class="x10cb-label">Special Offer</span>
+              <h2>Get 10% Cash Back</h2>
+              <p>Buy a new mobile phone and earn instant rewards.</p>
+      
+              <div class="x10cb-point">
+                <span>✔</span> Spend Minimum 40 US Dollars
+              </div>
+      
+              <a href="404.html" class="x10cb-btn">Grab Your Deals</a>
+            </div>
+      
+            <div class="x10cb-media">
+              <div class="x10cb-semicircle">
+                <img src="./mobile cash.webp" alt="Mobile Offer">
+                <i class="x10cb-corner tl"></i>
+                <i class="x10cb-corner tr"></i>
+                <i class="x10cb-corner bl"></i>
+                <i class="x10cb-corner br"></i>
+              </div>
+            </div>
+          </div>
+      
+          <!-- SLIDE 2 -->
+          <div class="x10cb-slide">
+            <div class="x10cb-text">
+              <span class="x10cb-label">Limited Time</span>
+              <h2>10% Cash Back on Cards</h2>
+              <p>Use your bank card and save more every purchase.</p>
+      
+              <div class="x10cb-point">
+                <span>✔</span> Spend Minimum 40 US Dollars
+              </div>
+      
+              <a href="404.html" class="x10cb-btn">Grab Your Deals</a>
+            </div>
+      
+            <div class="x10cb-media">
+              <div class="x10cb-semicircle">
+                <img src="./mob.webp" alt="Card Cashback">
+                <i class="x10cb-corner tl"></i>
+                <i class="x10cb-corner tr"></i>
+                <i class="x10cb-corner bl"></i>
+                <i class="x10cb-corner br"></i>
+              </div>
+            </div>
+          </div>
+      
+        </div>
+      </section>
+
+
+
+      <!-- <footer> -->
+    <footer class="footer">
+        <div class="footer-container">
+    
+            <!-- Logo / About -->
+            <div class="footer-box">
+                <img src="./white.webp" alt="Stackly Logo" class="footer-logo"  style="height:60px;">
+   
+               
+                <!-- <p>We deliver secure, scalable and innovative IT services for global businesses.</p><br> -->
+    
+                <!-- Social Icons -->
+                <div class="footer-social">
+                    <a href="./404.html"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="./404.html"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="./404.html"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="./404.html"><i class="fa-brands fa-x-twitter"></i></a>
+                </div>
+            </div>
+    
+            <!-- Quick Links -->
+            <div class="footer-box">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="./index.html">Home </a></li>
+                    
+                    <li><a href="./aboutus.html">About-us</a></li>
+                    <li><a href="./accounts.html">Accounts</a></li>
+                    <li><a href="./loans.html">Loans</a></li>
+                    <li><a href="./contact1.html">Contact</a></li>
+                </ul>
+            </div>
+    
+            <!-- Address -->
+            <div class="footer-box">
+                <h3>Our Address</h3>
+                <p>
+                    MMR complex.<br>
+                    chinna tirupathi kovil street,<br>
+                    salem,Tamil nadu-636008<br>
+                    <!-- Bengaluru, Karnataka – 560066<br> -->
+                    India<br><br>
+    
+                    <strong>Phone:</strong> +91 98765 43210<br>
+                    <strong>Email:</strong> support@thestackly.com
+                </p>
+            </div>
+    
+            <!-- Google Map -->
+            <div class="footer-box">
+                <h3>Location</h3>
+                <iframe 
+                src="https://www.google.com/maps?q=Salem%20Tamil%20Nadu&output=embed"
+                    allowfullscreen="" 
+                    loading="lazy">
+                </iframe>
+            </div>
+    
+        </div>
+    
+        <div class="footer-bottom">
+            <p>© 2025 stackly | All Rights Reserved</p>
+        </div>
+    </footer>
+
+
+    
+
+
+
+
+
+
+      
+  
+  
+<script>
+
+    // TOGGLE MENU
+const toggleBtn = document.getElementById("menu-toggle");
+const navLinks = document.querySelector(".nav-links");
+
+toggleBtn.addEventListener("click", () => {
+    if (navLinks.style.display === "flex") {
+        navLinks.style.display = "none";
+    } else {
+        navLinks.style.display = "flex";
+    }
+});
+
+// MOBILE DROPDOWN CLICK
+const dropdownBtn = document.querySelector(".dropdown-btn");
+const dropdownMenu = document.querySelector(".dropdown-content");
+
+dropdownBtn.addEventListener("click", (e) => {
+    e.preventDefault(); 
+    dropdownMenu.style.display =
+        dropdownMenu.style.display === "block" ? "none" : "block";
+});
+
+
+
+
+    const slides = document.querySelectorAll(".slides");
+    const texts = [
+      "Banking Made Simple & Secure",
+      "Your Money, Your Control",
+      "Smarter Savings for Tomorrow"
+    ];
+    
+    let index = 0;
+    let textIndex = 0;
+    let charIndex = 0;
+    
+    function showSlide() {
+      slides.forEach(s => s.classList.remove("active"));
+      slides[index].classList.add("active");
+    
+      const typeEl = slides[index].querySelector(".type-text");
+      typeEl.textContent = "";
+      charIndex = 0;
+      typeText(typeEl, texts[index]);
+    
+      index = (index + 1) % slides.length;
+    }
+    
+    function typeText(el, text) {
+      if (charIndex < text.length) {
+        el.textContent += text.charAt(charIndex);
+        charIndex++;
+        setTimeout(() => typeText(el, text), 70);
+      }
+    }
+    
+    showSlide();
+    setInterval(showSlide, 6000);
+
+    const cards = document.querySelectorAll('.category-card');
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('show');
+    }
+  });
+}, { threshold: 0.3 });
+
+cards.forEach(card => observer.observe(card));
+
+
+(function(){
+  const esrTarget = document.querySelector('.esr-animate');
+
+  if(!esrTarget) return;
+
+  const esrObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if(entry.isIntersecting){
+        entry.target.classList.add('show');
+      }
+    });
+  }, { threshold: 0.3 });
+
+  esrObserver.observe(esrTarget);
+})();
+
+
+
+
+/* SCROLL REVEAL */
+const ccObserver = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("cc-show");
+    }
+  });
+}, { threshold: 0.3 });
+
+document.querySelectorAll(".cc-hidden").forEach(el => ccObserver.observe(el));
+
+/* FORM VALIDATION */
+function ccValidateForm() {
+  const name = document.getElementById("ccName").value.trim();
+  const error = document.getElementById("ccError");
+
+  if (name === "") {
+    error.style.display = "block";
+    return false;
+  } else {
+    window.location.href = "./404.html";
+    return false;
+  }
+}
+
+
+
+const fxrCards = document.querySelectorAll(".fxr-card");
+
+const fxrObserver = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("fxr-show");
+      fxrObserver.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.3 });
+
+fxrCards.forEach(card => fxrObserver.observe(card));
+
+
+
+
+(() => {
+  const slides = document.querySelectorAll('.x10cb-slide');
+  let index = 0;
+  let started = false;
+
+  function activateSlide(i) {
+    slides.forEach(s => s.classList.remove('x10cb-active'));
+    slides[i].classList.add('x10cb-active');
+  }
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting && !started) {
+        started = true;
+        activateSlide(0);
+        setInterval(() => {
+          index = (index + 1) % slides.length;
+          activateSlide(index);
+        }, 4500);
+      }
+    });
+  }, { threshold: 0.35 });
+
+  observer.observe(document.querySelector('.x10cb-section'));
+})();
+
+
+
+
+
+(() => {
+  const section = document.querySelector('.bnkrel-section');
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        section.classList.add('bnkrel-show');
+        observer.disconnect();
+      }
+    });
+  }, { threshold: 0.3 });
+
+  observer.observe(section);
+})();
+
+
+window.addEventListener('load', () => {
+  const loader = document.getElementById('pgload');
+  setTimeout(() => {
+    loader.classList.add('pgload-hide');
+  }, 800);
+});
+
+    </script>
+
+
+</body>
+</html>
+
+
+
+
+    
